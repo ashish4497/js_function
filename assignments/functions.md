@@ -77,9 +77,6 @@ function checkAge(age) {
 ```
 Is there any difference in the behavior of these two variants? If there is what is that?
  var age =+prompt("Enter your age");
- do  {
-    alert(true);
- } while (age>18)
 
 5. 🎖 Write a function pow(x,n) that returns x in power n.
 
@@ -108,8 +105,7 @@ Is there any difference in the behavior of these two variants? If there is what 
 ```
 var n = +prompt("Enter a number");
 function sum (n){
-  var pro += (n*(n+1))/2;
-  return pro;
+
 }
 
 
@@ -119,12 +115,10 @@ function sum (n){
 // your code goes here
 var n =+prompt("Enter the number");
 function sum (n) {
-  var sum = 0;
-  for(let i=0; i<=n; i++){
-    sum +=i;
-    return sum;
-  }
+  var total = (n(n+1)/2);
+  return total;
 }
+
 
 ```
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
