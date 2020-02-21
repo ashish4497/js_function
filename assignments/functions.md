@@ -3,9 +3,12 @@
   * [ ] Calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
   * [ ] Outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
-
 ```js
 // your code goes here
+function puppy(age){
+  var conv = age * 7;
+  console.log(`your dog is ${conv} years old`);
+}
 ```
 2. 🎖Write a function named calculateSupply that:
   * [ ] takes 2 arguments: age, amount per day.
@@ -16,6 +19,12 @@
 ```js
 // your code goes here
 ```
+function calculateSupply(age,amount){   
+  var consume = amount*365;
+  var restLifeConsume = consume*age;
+  return restLifeConsume;
+}
+
 3. 🎖Create a function called celsiusToFahrenheit:
   * [ ] Store a celsius temperature into a variable.
   * [ ] Convert it to fahrenheit and output "NN°C is NN°F".
@@ -26,6 +35,9 @@
 ```js
 // your code goes here
 ```
+function celsiusToFahrenheit()
+
+
 4. 🎖The function below returns true if the parameter age is greater than 18. Otherwise it asks for a confirmation and returns its result:
 
 ```js
@@ -42,11 +54,16 @@ function checkAge(age) {
   ```js
   // your code goes here
   ```
+  var age = +prompt("Enter your age");
+  (age > 18) ? true :"Did parents allow you?";
+
 
   4.2 🎖Convert the above function using `||` operator.
   ```js
   // your code goes here
   ```
+ var age = age >18 || confirm("Did parents allow you?");
+
 Will the function work differently if else is removed like below?
 
 ```js
@@ -59,7 +76,10 @@ function checkAge(age) {
 }
 ```
 Is there any difference in the behavior of these two variants? If there is what is that?
-
+ var age =+prompt("Enter your age");
+ do  {
+    alert(true);
+ } while (age>18)
 
 5. 🎖 Write a function pow(x,n) that returns x in power n.
 
@@ -68,7 +88,13 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 ```js
 // Your code goes here
-
+ function pow(x,y){
+   var num = x;
+    for (let i = 1; i < y; i++) {
+    num *= x;
+  }
+  return num;
+ }
 // After writing code uncomment to check the answer.
 // pow(3, 2); // 9
 // pow(3, 3); // 27
@@ -80,10 +106,26 @@ Is there any difference in the behavior of these two variants? If there is what 
 ```js
 // your code goes here
 ```
+var n = +prompt("Enter a number");
+function sum (n){
+  var pro += (n*(n+1))/2;
+  return pro;
+}
+
+
 6. 🎖Write a program that asks the user for a number n using prompt and prints the sum of the numbers 1 to n
 
 ```js
 // your code goes here
+var n =+prompt("Enter the number");
+function sum (n) {
+  var sum = 0;
+  for(let i=0; i<=n; i++){
+    sum +=i;
+    return sum;
+  }
+}
+
 ```
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
 
@@ -95,6 +137,13 @@ Is there any difference in the behavior of these two variants? If there is what 
 
 ```js
 // Your code here.
+function min(x, y) {
+  if (x > y) {
+    console.log(y);
+  } else {
+    console.log(x);
+  }
+}
 
 console.log(min(0, 10));
 // → 0
