@@ -18,12 +18,13 @@ function puppy(age){
 
 ```js
 // your code goes here
-```
 function calculateSupply(age,amount){   
   var consume = amount*365;
   var restLifeConsume = consume*age;
   return restLifeConsume;
 }
+```
+
 
 3. 🎖Create a function called celsiusToFahrenheit:
   * [ ] Store a celsius temperature into a variable.
@@ -114,11 +115,14 @@ function sum (n){
 ```js
 // your code goes here
 var n =+prompt("Enter the number");
-function sum (n) {
-  var total = (n(n+1)/2);
-  return total;
+function findSum(n){
+  let sum = 0;
+  for(let i = 1; i <= n; i++) {
+    sum = sum + i;
+  }
+  return sum;
 }
-
+findSum(n);
 
 ```
 7. 🎖Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
@@ -126,6 +130,17 @@ function sum (n) {
 ```js
 // your code goes here
 ```
+var n =+prompt("Enter the number");
+function findSum(n){
+  let sum = 0;
+  for(let i = 1; i <= n; i++) {
+     if (i%5==0 || i%7==0){
+      sum = sum + i;
+    }
+  }
+  return sum;
+}
+findSum(n);
 
 8. 🎖Write a function `min` that takes two arguments and returns their minimum.
 
